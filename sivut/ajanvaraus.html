@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ajanvaraus</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  let lastScroll = 0;
+  const nav = document.querySelector('nav');
+
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+
+    if (currentScroll > lastScroll && currentScroll > 50) {
+      nav.classList.add('hidden');
+    } else {
+      nav.classList.remove('hidden');
+    }
+    lastScroll = currentScroll;
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active'); 
+  });
+});
+
+
+</script>
+
+<nav>
+  <div class="nav-left">
+    <img src="images/logo.png" alt="Logo" class="logo">
+  </div>
+  <div class="hamburger">&#9776;</div> <!-- burger -->
+  <ul class="nav-links">
+    <li><a href="index.html">Etusivu</a></li>
+    <li><a href="palvelut.html">Palvelut</a></li>
+    <li><a href="tietoa.html">Tietoa</a></li>
+    <li><a href="ajanvaraus.html">Ajanvaraus</a></li>
+  </ul>
+</nav>
+<main>
+
+<section class="booking">
+  <h2>Ajanvaraus</h2>
+  <iframe 
+      src="https://booksalon.fi/glow-by-venla?utm_source=ig&utm_medium=social&utm_content=link_in_bio&booking-state=N4IgpgtgDgNg9gTzGAkgExALhANgJwDMAxgEYDsADAKxkAcVaFYFFATACwBmAjGQRRgC%2BQA" 
+      width="100%" 
+      height="700" 
+      style="border:0; border-radius:15px;" 
+      allowfullscreen 
+      loading="lazy">
+  </iframe>
+</section>
+<footer>
+  <div class="footer-container">
+    <div class="footer-contact">
+    <h3>Yhteystiedot</h3>
+      <p>Glow by Venla</p>
+      </p>Hippoksenkatu 44 LT 1, 33530 Tampere</p>
+      <p><a href="tel:+358401234567">040 123 4567</a></p>
+     <p><a href="mailto:venla.friman@gmail.com">venla.friman@gmail.com</a></p>
+    </div>
+    <div class="footer-social">
+      <h3>Seuraa meitä</h3>
+      <a href="https://www.instagram.com/glowbyvenla/reels/" target="_blank">Instagram</a><br>
+      <a href="#" target="_blank">TikTok</a>
+    </div>
+  </div>
+  <p class="footer-bottom">&copy; 2026 Iisa Keiskoski</p>
+</footer>
+</body>
+</html>

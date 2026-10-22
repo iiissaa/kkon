@@ -1,0 +1,165 @@
+<!DOCTYPE html> 
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kauneushoitola</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  let lastScroll = 0;
+  const nav = document.querySelector('nav');
+
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+
+    if (currentScroll > lastScroll && currentScroll > 50) {
+      nav.classList.add('hidden');
+    } else {
+      nav.classList.remove('hidden');
+    }
+    lastScroll = currentScroll;
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  const hamburger = document.querySelector('.hamburger');
+  const navLinks = document.querySelector('.nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active'); 
+  });
+});
+
+
+</script>
+
+<nav>
+  <div class="nav-left">
+    <img src="images/logo.png" alt="Logo" class="logo">
+  </div>
+  <div class="hamburger">&#9776;</div> <!-- burger -->
+  <ul class="nav-links">
+    <li><a href="index.html">Etusivu</a></li>
+    <li><a href="palvelut.html">Palvelut</a></li>
+    <li><a href="tietoa.html">Tietoa</a></li>
+    <li><a href="ajanvaraus.html">Ajanvaraus</a></li>
+  </ul>
+</nav>
+<main>
+
+<section class="hero-large" style="background-image:url('images/hero.jpg');">
+  <div class="hero-text">
+    <h1>Tervetuloa hoitolaan</h1>
+    <p>Rauhallinen ja ammattitaitoinen kampaamo- ja ripsipalvelu</p>
+    <a href="ajanvaraus.html" class="btn">Varaa aika</a>
+  </div>
+</section>
+
+
+<section class="news-section">
+  <h2>Ajankohtaista</h2>
+
+  <div class="news-box highlight">
+    <h3>Tarjous</h3>
+    <p>Ripsienpidennykset -15 % maaliskuun ajan.</p>
+    <span class="news-date">Voimassa 1.3.–31.3.</span>
+  </div>
+</section>
+
+
+<section class="services-overview">
+  <div class="service-card">
+
+    <div class="service-card">
+      <img src="images/kuva1.JPG" alt="Ripsienpidennykset">
+      
+        <h3>Ripsienpidennykset</h3>
+        <p>Klassiset, volyymi- ja hybridripset ammattitaidolla.</p>
+        <a href="palvelut.html#ripset" class="btn small-btn">Lisätietoa</a>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <img src="images/kuva4.jpg" alt="Hiusten leikkaus">
+      
+        <h3>Hiusten leikkaus</h3>
+        <p>Naisten ja miesten leikkaukset sekä viimeistelyt.</p>
+        <a href="palvelut.html#hiukset" class="btn small-btn">Lisätietoa</a>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <img src="images/kuva2.jpg" alt="Värjäys ja muotoilu">
+   
+        <h3>Värjäys & muotoilu</h3>
+        <p>Raidoitukset, sävytykset ja juhlakampaukset.</p>
+        <a href="palvelut.html#hiukset" class="btn small-btn">Lisätietoa</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+
+
+<section class="location-section">
+  <h2>Sijainti</h2>
+  <p>Hippoksenkatu 44 LT 1, 33530 Tampere</p>
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1903.8347143706546!2d23.815927577453525!3d61.49905303549579!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x468f2133993f49b3%3A0xdd822467beef9516!2sGlow%20By%20Venla!5e0!3m2!1sfi!2sfi!4v1771573789963!5m2!1sfi!2sfi" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy">
+  </iframe>
+</section>
+
+</main>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-contact">
+    <h3>Yhteystiedot</h3>
+      <p>Glow by Venla</p>
+      </p>Hippoksenkatu 44 LT 1, 33530 Tampere</p>
+      <p><a href="tel:+358401234567">040 123 4567</a></p>
+     <p><a href="mailto:venla.friman@gmail.com">venla.friman@gmail.com</a></p>
+    </div>
+
+    <div class="footer-social">
+      <h3>Seuraa meitä</h3>
+      <a href="https://www.instagram.com/glowbyvenla/reels/" target="_blank">Instagram</a><br>
+      <a href="#" target="_blank">TikTok</a>
+    </div>
+  </div>
+
+  <p class="footer-bottom">&copy; 2026 Iisa Keiskoski</p>
+</footer>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  let lastScroll = 0;
+  const nav = document.querySelector('nav');
+
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+
+    if (currentScroll > lastScroll && currentScroll > 50) {
+      nav.classList.add('hidden');
+    } else {
+      nav.classList.remove('hidden');
+    }
+    lastScroll = currentScroll;
+  });
+});
+</script>
+
+</body>
+</html>
